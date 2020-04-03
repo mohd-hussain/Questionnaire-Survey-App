@@ -48,7 +48,7 @@ class SurveyController extends Controller
        $servey = $questionnair->serveys()->create($data['servey']);
        $servey->responses()->createMany($data['responses']);
 
-      return 'Thank You';
+      return view(('Survey.response'),compact('questionnair'));
     }
 
     /**
